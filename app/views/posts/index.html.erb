@@ -1,0 +1,174 @@
+<style>
+  .likes{
+    display: flex;
+    font-size: 18px;
+  }
+  .post {
+    padding: 10px;
+  }
+  img {
+    text-align: center;
+    width: 100%;
+  }
+  .row {
+    margin: 15px;
+  }
+  .more {
+    font-size: 20px;
+  }
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .likes {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex {
+    display: flex;
+  }
+  a {
+    display: block;
+  }
+</style>
+<div class="row">
+  <div class="col-sm-8 post">
+
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark" align="right"></span>
+    </div>
+
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+  <div class="col-sm-4 hidden-xs">
+    <h3>Most Liked</h3>
+    <a href="?"><%=Faker::Lorem.sentence(1)%></a>
+    <a href="?"><%=Faker::Lorem.sentence(1)%></a>
+    <a href="?"><%=Faker::Lorem.sentence(1)%></a>
+    <a href="?"><%=Faker::Lorem.sentence(1)%></a>
+    <a href="?"><%=Faker::Lorem.sentence(1)%></a>
+    <a href="?"><%=Faker::Lorem.sentence(1)%></a>
+
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-4 post">
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+    </div>
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+  <div class="col-sm-4 post">
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+    </div>
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+  <div class="col-sm-4 post">
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+    </div>
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-4 post">
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+    </div>
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+  <div class="col-sm-4 post">
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+    </div>
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+  <div class="col-sm-4 post">
+    <img src="/images/dubrovnik.jpg" class = "center-block">
+
+    <div class="likes">
+      <div class="flex">
+        <span class=" heart glyphicon glyphicon-heart"></span>
+        <p> <%=Faker::Number.number(3) %> </p>
+      </div>
+      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+    </div>
+    <h3>Title</h3>
+    <p><%= Faker::Lorem.paragraph(2) %></p>
+    <p><%= Faker::Name.name %></p>
+    <p>02/13/17</p>
+  </div>
+
+</div>
+
+
+
+<div class="footer">
+  <a href="#" class="hidden-xs more">More Articles</a>
+</div>
