@@ -1,0 +1,83 @@
+
+  .likes{
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+  }
+  .post {
+    padding: 10px;
+
+  }
+  img {
+    text-align: center;
+    width: 100%;
+  }
+  .row {
+    margin: 15px;
+  }
+  .more {
+    font-size: 20px;
+  }
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 200px;
+  }
+  .flex {
+    display: flex;
+  }
+  a {
+    display: block;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title_likes{
+    display: flex;
+    align-self:flex-end;;
+  }
+  .glyphicon {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .article {
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .inline {
+    display: inline;
+  }
+  .name {
+    width: 100%;
+  }
+  form {
+    padding: 20px;
+    border-bottom: solid grey 3px;
+    margin-bottom: 20px;
+  }
+  .comment_info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .comments {
+    margin: 10px;
+  }
+  .author {
+    font-size: 20px;
+  }
+  .date {
+    text-align: right;
+  }
+  h2 {
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+  .likes2{
+    display: flex;
+    font-size: 18px;
+  }
+  .padding {
+    padding: 10px;
+  }
