@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get '/'=> 'posts#index'
 
-  get '/show'=> 'posts#show'
+  resources :categories
+
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
+
+
 end
