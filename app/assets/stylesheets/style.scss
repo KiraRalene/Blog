@@ -84,3 +84,17 @@
   .body-area {
     min-height: 100px;
   }
+  .comment_link{
+  .glyphicon-comment{
+    vertical-align:middle;
+    margin:auto;
+    padding:10px;
+    font-size: 2em;
+    text-align: right;
+  }
+  &:hover, &:visited, &:active{
+    text-decoration:none;
+    background-color:transparent;
+    color:dark grey;
+  }
+}

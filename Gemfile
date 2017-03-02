@@ -35,6 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'awesome_print'
 gem 'interactive_editor'
 gem 'hirb'
+gem 'cancancan'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'faker'

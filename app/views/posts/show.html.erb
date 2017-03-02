@@ -19,6 +19,7 @@
     <p class="date">
       <%=@post.created_at%>
     </p>
+
     <div class="visible-xs">
       <div class="likes2">
         <div class="flex">
@@ -44,6 +45,12 @@
           <%=Faker::Lorem.paragraph(10)%>
         </p>
       </div>
+      <% if can?(:manage, @post) %>
+        <%= link_to 'Edit', edit_post_path(@post) %>
+        <%= link_to 'Delete', post_path(@post),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' } %>
+    <% end %>
     </div>
   </div>
   <div class="col-sm-1"></div>
@@ -82,7 +89,12 @@
             </div>
           </div>
           <div class="comment_info">
-            <p><%=com.name%></p>
+            <div>
+              <p><%=com.name%></p>
+              <% if can?(:manage, com) || com.user == current_user%>
+                <%= link_to "Delete", post_comment_path(@post, com), method: :delete, data: {confirm: "Are you sure"} %>
+              <%end%>
+            </div>
             <p><%=com.created_at%></p>
           </div>
           <hr>
