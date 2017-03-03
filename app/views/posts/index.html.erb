@@ -12,11 +12,12 @@
       </div>
       <span class="bookmark glyphicon glyphicon-bookmark" align="right"></span>
     </div>
-
-    <h3><%=@posts[0].title %></h3>
-    <p><%= @posts[0].body %></p>
-    <p>author </p>
-    <p>02/13/17</p>
+    <% if @posts[0]%>
+      <h3><%=@posts[0].title %></h3>
+      <p><%= @posts[0].body %></p>
+      <p>author </p>
+      <p>02/13/17</p>
+    <%end%>
   </div>
 
   <div class="col-sm-4 hidden-xs">
