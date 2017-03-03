@@ -38,23 +38,23 @@ class UsersController < ApplicationController
   end
 
   def update_password
-       # update_password_user_path
-       user_params = params.require(:user).permit(:password,
-                                                  :password_confirmation)
-       @user = User.find params[:id]
+     # update_password_user_path
+     user_params = params.require(:user).permit(:password,
+                                               :password_confirmation)
+     @user = User.find params[:id]
 
-        if @user&.authenticate(params[:user][:current_password])
-            if @user.update user_params
-              session[:user_id] = @user.id
-              redirect_to root_path, notice: 'Password updated successfully!'
-            else
-              render :edit_password
-            end
-        else
-          flash.now[:alert] = 'Wrong password'
-          render :edit_password
-        end
-     end
+      if @user&.authenticate(params[:user][:current_password])
+          if @user.update user_params
+            session[:user_id] = @user.id
+            redirect_to root_path, notice: 'Password updated successfully!'
+          else
+            render :edit_password
+          end
+      else
+        flash.now[:alert] = 'Wrong password'
+        render :edit_password
+      end
+   end
 
 
 end
