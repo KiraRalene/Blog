@@ -3,6 +3,7 @@
     display: flex;
     font-size: 18px;
     justify-content: space-between;
+    margin-top: 3px;
   }
   .post {
     padding: 10px;
@@ -41,6 +42,14 @@
   .glyphicon {
     margin-right: 10px;
     margin-left: 10px;
+  }
+  .lg {
+    font-size: 25px;
+  }
+  .xl {
+    font-size: 30px;
+    margin-left: 5px;
+    padding-bottom: 10px;
   }
   .article {
     margin-left:10px;
@@ -84,22 +93,15 @@
   .body-area {
     min-height: 100px;
   }
-  .comment_link{
-  .glyphicon-comment{
-    vertical-align:middle;
-    margin:auto;
-    padding:10px;
-    font-size: 2em;
-    text-align: right;
-  }
-  &:hover, &:visited, &:active{
-    text-decoration:none;
-    background-color:transparent;
-    color:dark grey;
-  }
-}
 
 .post_text {
   overflow:auto;
   height: 25vh;
+}
+#topnav {
+  background-color: white;
+  border: none;
+}
+#topnav-drop {
+  background-color: white;
 }

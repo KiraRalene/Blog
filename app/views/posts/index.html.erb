@@ -3,17 +3,18 @@
 <div class="row">
   <div class="col-sm-8 post">
 
+    <h1>Top Post</h1>
     <img src="/images/dubrovnik.jpg" class = "center-block">
 
     <div class="likes">
       <div class="flex">
-        <span class=" heart glyphicon glyphicon-heart"></span>
+        <span class=" heart glyphicon lg glyphicon-heart"></span>
         <p> <%=Faker::Number.number(3) %> </p>
       </div>
-      <span class="bookmark glyphicon glyphicon-bookmark" align="right"></span>
+      <span class="bookmark glyphicon lg glyphicon-bookmark" align="right"></span>
     </div>
     <% if @posts[0]%>
-      <h3><%=@posts[0].title %></h3>
+      <h3><%=link_to @posts[0].title, post_path(@posts[0]) %></h3>
       <p><%= @posts[0].body %></p>
       <p>author </p>
       <p>02/13/17</p>
@@ -40,13 +41,13 @@
 
     <div class="likes">
       <div class="flex">
-        <span class=" heart glyphicon glyphicon-heart"></span>
+        <span class=" heart glyphicon lg glyphicon-heart"></span>
         <p> <%=Faker::Number.number(3) %> </p>
       </div>
-      <span class="bookmark glyphicon glyphicon-bookmark"></span>
+      <span class="bookmark glyphicon lg glyphicon-bookmark"></span>
     </div>
     <div class="post_text">
-      <h3><%=@posts[i].title%></h3>
+      <h3><%=link_to @posts[i].title, post_path(@posts[i])%></h3>
       <p><%= @posts[i].body %></p>
       <p>author</p>
       <p>02/13/17</p>

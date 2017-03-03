@@ -1,16 +1,17 @@
-<h1> Edit Post </h1>
 
-<% if @post.errors.any? %>
-  <ul>
-    <%@post.errors.full_messages.each do |msg|%>
-      <li><%= msg %></li>
-    <%end%>
-  </ul>
-<%end%>
 
 <div class = 'row'>
   <div class = 'col-sm-1'></div>
   <div class = 'col-sm-10'>
+    <h1> Edit Post </h1>
+
+    <% if @post.errors.any? %>
+      <ul>
+        <%@post.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+        <%end%>
+      </ul>
+    <%end%>
     <%= form_for @post do |f|%>
       <div class = "field form-group">
         <%= f.collection_select(:category_id, Category.all, :id, :name) %>
