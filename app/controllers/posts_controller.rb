@@ -52,9 +52,13 @@ class PostsController < ApplicationController
     params.require(:post).permit([:title, :body, :category_id])
   end
 
+  def find_post
+    @post = Post.find params[:id]
+  end
+
   def authorize
-    
-    if cannot(:manage, @post)
+
+    if cannot?(:manage, @post)
       redirect_to posts_path, alert: 'not authorized'
     end
   end

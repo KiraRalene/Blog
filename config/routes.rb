@@ -9,10 +9,12 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :posts do
+    resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
   end
 
   resources :users, only: [:new, :create, :edit, :update] do
+    resources :likes, only: [:index]
     get   :edit_password, on: :member
     patch :update_password, on: :member
   end
@@ -21,6 +23,6 @@ Rails.application.routes.draw do
     delete :destroy, on: :collection
   end
 
-  
+
 
 end
