@@ -38,9 +38,10 @@
              </li>
              <li>
               <%= link_to sessions_path('Sign Out'), method: :delete do %>
-              <span class="glyphicon glyphicon-log-in"></span>Sign Out
-             <% end %>
-           </li>
+                <span class="glyphicon glyphicon-log-in"></span>Sign Out
+              <% end %>
+            </li>
+            <li> <%= link_to 'Liked Posts', user_likes_path(current_user)%> </li>
 
           <%else%>
             <li>
@@ -116,9 +117,10 @@
                    </li>
                    <li>
                     <%= link_to sessions_path('Sign Out'), method: :delete do %>
-                    <span class="glyphicon glyphicon-log-in"></span>Sign Out
-                   <% end %>
-                 </li>
+                      <span class="glyphicon glyphicon-log-in"></span>Sign Out
+                    <% end %>
+                  </li>
+                  <li> <%= link_to 'Liked Posts', user_likes_path(current_user)%> </li>
 
                 <%else%>
                   <li>

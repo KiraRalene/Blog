@@ -1,0 +1,25 @@
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+  <h1 class="title">Your Liked Posts</h1>
+
+  <div class = 'row'>
+    <% @posts.each do |post| %>
+      <div class = "col-sm-4 post">
+        <img src="/images/dubrovnik.jpg" class = "center-block">
+        <div class="likes">
+          <div class="flex">
+            <span class=" heart glyphicon lg glyphicon-heart"></span>
+            <p> <%=Faker::Number.number(3) %> </p>
+          </div>
+          <span class="bookmark glyphicon lg glyphicon-bookmark"></span>
+        </div>
+        <div class = "post_text">
+          <h3><%=link_to post.title, post_path(post)%></h3>
+          <p><%= post.body%>
+          <p>02/13/17</p>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+<div class="col-sm-1"></div>

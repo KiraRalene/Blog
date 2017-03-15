@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
       @comment.user = current_user
       @comment.post = @post
       if @comment.save
+        BlogMailer.notify_post_owner(@comment).deliver_later
         redirect_to post_path(@post), notice: 'Comment created!'
 
       else

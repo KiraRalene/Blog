@@ -38,6 +38,7 @@ gem 'interactive_editor'
 gem 'hirb'
 gem 'cancancan'
 gem 'rails_12factor', group: :production
+gem 'delayed_job_active_record'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'faker'
